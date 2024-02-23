@@ -1,0 +1,84 @@
+:root {
+    --lightback: #dcdcdd;
+    --lightmain: #4B0082;
+    --lightsecond: #8A2BE2;
+    --lightash: #4E4E50;
+    --darkback: #0B0C10;
+    --darkmain: #66FCF1;
+    --darksecond: #45A29E;
+}
+
+body{
+    background-color: var(--lightback);
+    margin: 0;
+    padding: 0;
+}
+.front{
+    height: 100vh;
+    /* background-color: red; */
+    
+}
+
+.left{
+    width: 30%;
+    
+    padding-top: 25vh;
+    padding-left: 25vh;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: var(--darkback);
+    font-size: 60px;
+    float: left;
+    /* background-color: purple; */
+}
+
+.right{
+    width: 35%;
+    padding-top: 20vh;
+    padding-right: 25vh;
+    /* background-color:green; */
+    float: right;
+}
+
+.title{
+    color: var(--lightash);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.impText{
+    color: var(--darkback);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.desc{
+    color: var(--lightash);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.clrMain{
+    color: var(--lightmain);
+}
+
+.clrScnd{
+    color: var(--lightsecond);
+}
+
+.cvBtn{
+    width: 120px;
+    height: 50px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 3px solid var(--lightsecond);
+}
+
+.cvBtn:hover{
+    width: 122px;
+    height: 52px;
+    transition: .5s;
+    color:white;
+    background-color: var(--lightsecond);
+    border: 3px solid var(--lightsecond);
+    cursor: pointer;
+}
