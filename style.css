@@ -1,5 +1,5 @@
 :root {
-    --lightback: #dcdcdd;
+    --lightback: #c0c0c6;
     --lightmain: #4B0082;
     --lightsecond: #8A2BE2;
     --lightash: #4E4E50;
@@ -15,22 +15,43 @@ body{
 }
 .front{
     height: 100vh;
-    /* background-color: red; */
-    
+    /* background-color: red; */ 
 }
 
 .left{
     width: 30%;
-    
     padding-top: 25vh;
     padding-left: 25vh;
     font-family: "Kdam Thmor Pro", sans-serif;
-    color: var(--darkback);
-    font-size: 60px;
     float: left;
     /* background-color: purple; */
 }
 
+.name{
+    color: var(--lightmain);
+    font-size: 60px;
+}
+
+.front .left .contact{
+    width: 70%;
+    height: 12vh;
+    margin-top: 40px;
+    /* background-color: #0B0C10; */
+}
+
+.front .contact .frontsocial{
+    color: black;
+    font-size: 25px;
+    margin-right: 10%;
+}
+
+.line{
+    width: 60px;
+    height: 5px;
+    margin-top: -50px;
+    margin-left: 2px;
+    background-color: var(--lightmain);
+}
 .right{
     width: 35%;
     padding-top: 20vh;
@@ -41,7 +62,7 @@ body{
 
 .title{
     color: var(--lightash);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
 }
 
@@ -51,19 +72,17 @@ body{
     font-weight: 600;
 }
 
-.desc{
-    color: var(--lightash);
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.clrMain{
+.highlight{
     color: var(--lightmain);
 }
 
-.clrScnd{
-    color: var(--lightsecond);
+.desc{
+    color: var(--lightash);
+    font-size: 20px;
+    font-weight: 600;
 }
+
+
 
 .cvBtn{
     width: 120px;
@@ -81,4 +100,145 @@ body{
     background-color: var(--lightsecond);
     border: 3px solid var(--lightsecond);
     cursor: pointer;
+}
+
+.second{
+    height: 100vh;
+    /* background-color: red;  */
+}
+.second .up-left{
+    height: 25vh;
+    width: 40%;
+    /* background-color: aqua; */
+    float: left;
+    padding-top: 15vh;
+    margin-left: 10%;
+}
+
+
+.second .up-right{
+    height: 25vh;
+    width: 40%;
+    /* background-color: aqua; */
+    float: left;
+    padding-top: 15vh;
+    margin-left: 10%;
+
+}
+
+.cp-box{
+    height: 30vh;
+    width: 30vh;
+    /* background-color: plum; */
+    float: left;    
+    text-align: center;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.cp-img{
+    height: 40px;
+}
+
+.platname{
+    font-size: 25px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.counter{
+    font-size: 35px;
+    font-weight: 900;
+    color: var(--lightsecond);
+}
+
+.more{
+    padding-top: 10vh;
+    height: 10vh;
+    /* background-color: #0B0C10; */
+    width: 12vh;
+}
+
+.more a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--lightsecond);
+}
+
+.box{
+    /* background-color: rgb(0, 0, 0); */
+    height:50vh;
+    width: 90%;
+    padding: 50vh 0vh 0vh 15vh;
+    /* margin: 45vh 0vh 0vh 15vh; */
+}
+
+.projectBox{
+    font-family: "Kdam Thmor Pro", sans-serif;
+    background-color: var(--lightash);
+    color: white;
+    text-align: center;
+    width: 40vh;
+    height: 45vh;
+    margin: 0vh 6vh 0vh 10vh;
+    padding: 0vh 15px 0vh 15px;
+    float: inline-start;
+}
+
+.pbox-title{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pbox-desc{
+    font-size: 13px;
+}
+
+.pbox-count{
+
+}
+
+.projectBox a{
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+}
+
+.projectBox a:hover{
+    color:var(--lightback);
+}
+
+/* dark mode */
+.dark-body{
+    background-color: var(--darkback);
+}
+
+.dark-name{
+    color: var(--darkmain);
+}
+
+.dark-frontsocial{
+    color: white;
+}
+
+.dark-line{
+    background-color: var(--darkmain);
+}
+
+.dark-title{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.dark-impText{
+    color: white;
+}
+
+.dark-highlight{
+    color: var(--darkmain);
+}
+
+.dark-desc{
+    color: white;
+
 }

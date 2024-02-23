@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="func.js"></script>
 
 </head>
 <style>
@@ -16,7 +17,52 @@
 
     .logo {
     }
+    /* toggle button start */
+    input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
 
+.stoggle {
+  cursor: pointer;
+  top: -10px;
+  left: -20px;
+  text-indent: -9999px;
+  width: 70px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.stoggle:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: #717171;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #c0bfbf;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 50px;
+}
+    /* toggle button end */
+  
     .nav ul {
         float: right;
         margin-right: 100px;
@@ -170,8 +216,12 @@
             </a>
 
         </label>
-
+        
         <ul id="side">
+            <li>
+                <input type="checkbox" id="switch" onchange = "darktoggle()"/>
+                <label class="stoggle"for="switch">Toggle</label>
+            </li>
             <li><a href="login.php">Login</a></li>
             <li><a href="signup.php">Sign up</a></li>
         </ul>
