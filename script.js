@@ -32,6 +32,7 @@ function darkmode() {
       if (inputEl.checked) {
          bodyEl.style.background = "#000";
          bodyEl.style.color = "#c0c0c6";
+         document.querySelector(".cursor").style.background = "#66FCF1";
          document.querySelector(".impText").style.color = "#fff";
          document.querySelector(".highlight").style.color = "#66FCF1"
          document.querySelector(".h2").style.color = "#66FCF1"
@@ -47,6 +48,7 @@ function darkmode() {
       } else {
          bodyEl.style.background = "#c0c0c6";
          bodyEl.style.color = "#4E4E50"
+         document.querySelector(".cursor").style.background = "#4B0082";
          document.querySelector(".impText").style.color = "#000"
          document.querySelector(".highlight").style.color = "#4B0082"
          document.querySelector(".h2").style.color = "#4B0082"
