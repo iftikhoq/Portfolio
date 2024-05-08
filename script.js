@@ -1,5 +1,36 @@
 
-// var i = document.querySelectorall(".left .contact-front i");   
+const lightMain="#4B0082";
+const darkMain="#66FCF1";
+
+const cfUrl = ' https://codeforces.com/api/user.info?handles=ifti.k.hoq&checkHistoricHandles=true';
+const lcUrl = 'https://leetcode-stats-api.herokuapp.com/ifti_k_hoq';
+
+let cfr =""
+fetch(cfUrl)
+.then(response => {
+   if (!response.ok) {
+     throw new Error('Network response was not ok');
+   }
+   return response.json();
+ })
+  .then(data => {
+   const userRatingData = data;
+   document.getElementById("cfMaxRating").innerHTML = userRatingData.result[0].maxRating;
+   document.getElementById("cfMaxRank").innerHTML = userRatingData.result[0].maxRank;
+})
+
+  fetch(lcUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const userRatingData = data;
+    document.getElementById("lcTotalSolve").innerHTML = userRatingData.totalSolved;
+    document.getElementById("lcranking").innerHTML = userRatingData.ranking;
+  })
 
 function curseranimation(){
    var crsr = document.querySelector(".cursor")
@@ -30,32 +61,81 @@ function darkmode() {
 
    function updateBody() {
       if (inputEl.checked) {
-         bodyEl.style.background = "#000";
+         bodyEl.style.background = "#0D0E0E";
          bodyEl.style.color = "#c0c0c6";
-         document.querySelector(".cursor").style.background = "#66FCF1";
+         document.querySelector(".cursor").style.background = darkMain;
          document.querySelector(".impText").style.color = "#fff";
-         document.querySelector(".highlight").style.color = "#66FCF1"
-         document.querySelector(".h2").style.color = "#66FCF1"
-         document.querySelector(".name").style.color = "#66FCF1"
-         document.querySelector(".lineee").style.background = "#45A29E"
+         // // document.querySelector(".frontsocial").style.color = darkMain;
+         // document.querySelector(".highlight").style.color = darkMain
+         // document.querySelector(".h2").style.color = darkMain
+         // document.querySelector(".name").style.color = darkMain
+         // document.querySelector(".lineee").style.background = darkMain
          document.querySelector(".btn").style.border = "3px solid #45A29E"
          document.querySelector(".overwrite").style.zIndex = 1;
+         // $("btn").toggleClass("hello");
+         document.querySelector(".btn1").style.opacity=0;
+
+         document.querySelector(".btn2").style.opacity=1;
+         document.querySelector(".btn2").style.zIndex=1;
+
+         var elements = document.getElementsByTagName('i');
+
+         for (var i = 0; i < elements.length; i++) {
+            elements[i].style.color = darkMain;
+         }
+
+         const linee = document.getElementsByClassName('col');
+
+         for (const div of linee) {
+             div.style.backgroundColor = darkMain;
+             div.style.color = 'black';
+         }
+
+         const t = document.getElementsByClassName('tcol');
+
+         for (const div of t) {
+             div.style.color = '#66FCF1';
+         }
          
-      //    i.forEach(function(i) {
-      //       i.style.color = "#45A29E";
-            
-      //   });
+         // for (var i = 0; i < skill.length; i++) {
+         //    skill[i].style.color = darkMain;
+         // }
+
       } else {
          bodyEl.style.background = "#c0c0c6";
          bodyEl.style.color = "#4E4E50"
-         document.querySelector(".cursor").style.background = "#4B0082";
+         document.querySelector(".cursor").style.background = lightMain;
+         // document.querySelector(".contact-front").style.color = lightMain;
          document.querySelector(".impText").style.color = "#000"
-         document.querySelector(".highlight").style.color = "#4B0082"
-         document.querySelector(".h2").style.color = "#4B0082"
-         document.querySelector(".name").style.color = "#4B0082"
-         document.querySelector(".lineee").style.background = "#4B0082"
+         // document.querySelector(".highlight").style.color = lightMain
+         // document.querySelector(".h2").style.color = lightMain
+         // document.querySelector(".name").style.color = lightMain
+         // document.querySelector(".lineee").style.background = lightMain
          document.querySelector(".btn").style.border = "3px solid #8A2BE2"
          document.querySelector(".overwrite").style.zIndex = -1;
+         document.querySelector(".btn1").style.opacity=1;
+         document.querySelector(".btn2").style.opacity=0;
+         document.querySelector(".btn2").style.zIndex=-1;
+
+         var elements = document.getElementsByTagName('i');
+
+         for (var i = 0; i < elements.length; i++) {
+            elements[i].style.color = lightMain;
+         }
+
+         const linee = document.getElementsByClassName('col');
+
+         for (const div of linee) {
+             div.style.backgroundColor = lightMain;
+             div.style.color = 'white';
+         }
+
+         const t = document.getElementsByClassName('tcol');
+
+         for (const div of t) {
+             div.style.color = lightMain;
+         }
+
       }
    }
    updateBody();
@@ -127,3 +207,4 @@ var tl2 = gsap.timeline({
       scrub: 3
    }
 })
+
