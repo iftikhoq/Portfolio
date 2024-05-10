@@ -264,7 +264,7 @@ main {
     color: black;
     position: absolute;
     overflow: hidden;
-    bottom: 19%;
+    bottom: 16%;
     border: 3px solid #8A2BE2;
     
 }
@@ -300,10 +300,9 @@ main {
 
 .btn2 {
     position:absolute;
-    bottom: 19%;
+    bottom: 16%;
     z-index: -1;
     opacity: 0;
-    /* display: none; */
     background-color: #c0c0c6;
     padding: 10px 20px;
     border-radius: 5px;
@@ -508,23 +507,67 @@ a{
     margin-top: 7.23vh;
 }
 
-.project2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8vw;
-    height: 60%;
+.page4 {
+    height: 100vh;
+    padding-top: 15vh;
     width: 100%;
+    /* background-color: rgb(207, 117, 137) ; */
+    display: flex;
+    gap: 4vh;
+    flex-direction: column;
+}
+.page4 h1{
+    margin-top: 8vh;
+    margin-bottom: 3vh;
+}
+.page4 .lineee {
+    height: 6px;
+    width: 4rem;
+    margin-bottom: 3vh;
+    border-radius: 5px;
+}
+.page4 .left{
+    /* background-color: red; */
+    height: 100%;
+    width:50%;
+}
+.page4 .left form{
+    display: flex;
+    align-items: center;
+    /* justify-content: cent; */
+    gap: 3vh;
+    flex-direction: column;
+}
+.page4 .left .con {
+    background-color: transparent;
+    text-align: center;
 
+    border: 2px solid var(--lightmain);
+    border-radius: 6px;
+    height: 5vh;
+    width: 50%;
+}
+.page4 .left su
+
+.page4 .left .body {
+    height: 19vh;
+    width: 50%;
 }
 
-.project2 .part {
-    height: 80%;
+.click{
+    padding: 5vh;
+    border: 2px solid #111;
+}
+.trigger{
+    /* transition: 1s; */
+    opacity: 0;
+    border: 2px solid #111;
+    /* padding: 5vh; */
+    /* border-color: red; */
+    overflow: hidden;
+    height: 0vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 25%;
-    color: #000;
-    background-color: #4E4E50;
+    flex-direction: column;
+    grid-auto-flow: 2vh;
+    /* margin-top: ; */
 }

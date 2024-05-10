@@ -1,11 +1,9 @@
-
 const lightMain="#4B0082";
 const darkMain="#66FCF1";
 
 const cfUrl = ' https://codeforces.com/api/user.info?handles=ifti.k.hoq&checkHistoricHandles=true';
 const lcUrl = 'https://leetcode-stats-api.herokuapp.com/ifti_k_hoq';
 
-let cfr =""
 fetch(cfUrl)
 .then(response => {
    if (!response.ok) {
@@ -43,7 +41,6 @@ function curseranimation(){
            y: dets.y,
            duration: 0.8,
            ease: "back.out(2)"
-   
        })
    })
 }
@@ -197,14 +194,52 @@ function btnanimation() {
 
 btnanimation()
 
-var tl2 = gsap.timeline({
-   scrollTrigger: {
-      trigger: ".page1 h1",
-      scroller: ".main",
-      // markers:true,
-      start: "top 50%",
-      end: "top 0%",
-      scrub: 3
-   }
+var clickcf=document.querySelector(".cf .click")
+var triggercf=document.querySelector(".cf .trigger")
+clickcf.addEventListener("mouseenter",()=>{
+   triggercf.style.opacity=1
+   gsap.to(triggercf,{
+      duration:1,
+      // marginTop:"2vh",
+      paddingTop:"3vh",
+      height:"35vh"
+   })
+})
+clickcf.addEventListener("mouseleave",()=>{
+   triggercf.style.opacity=1
+   gsap.to(triggercf,{
+      duration:1,
+      // marginTop:"2vh",
+      paddingTop:"0vh",
+      height:"0vh",
+      ease:"power4.out"
+   })
 })
 
+var clicklc=document.querySelector(".lc .click")
+var triggerlc=document.querySelector(".lc .trigger")
+clicklc.addEventListener("mouseenter",()=>{
+   triggerlc.style.opacity=1
+   gsap.to(triggerlc,{
+      duration:1,
+      // marginTop:"2vh",
+      paddingTop:"3vh",
+      height:"35vh"
+   })
+})
+clicklc.addEventListener("mouseleave",()=>{
+   triggerlc.style.opacity=1
+   gsap.to(triggerlc,{
+      duration:1,
+      // marginTop:"2vh",
+      paddingTop:"0vh",
+      height:"0vh",
+      ease:"power4.out"
+   })
+})
+var nav=document.querySelector(".nav")
+gsap.from(nav,{
+   y:-200,
+   opacity:0,
+   
+})
